@@ -7,91 +7,76 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
         }
         header {
-            background: #007CBA;
-            color: #fff;
-            padding: 20px 0;
+            background: #0072bc;
+            color: white;
+            padding: 10px 0;
             text-align: center;
-        }
-        nav {
-            background: #333;
-            color: #fff;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        main {
-            padding: 20px;
         }
         section {
             margin: 20px 0;
-            padding: 10px;
-            background: #fff;
+            padding: 20px;
+            background: white;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        footer {
+        h2 {
+            color: #0072bc;
+        }
+        .goal {
+            display: inline-block;
+            width: 30%;
+            margin: 1%;
             text-align: center;
+            border: 1px solid #0072bc;
+            border-radius: 5px;
             padding: 10px;
-            background: #007CBA;
-            color: #fff;
+            background: #e7f3ff;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>可持續發展目標 (SDGs)</h1>
-        <img src="images/sdg_logo.png" alt="SDG Logo">
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#goal1">目標 1: 消除貧窮</a></li>
-            <li><a href="#goal2">目標 2: 消除饑餓</a></li>
-            <li><a href="#goal3">目標 3: 確保健康生活</a></li>
-            <li><a href="#goal4">目標 4: 提供優質教育</a></li>
-            <li><a href="#goal5">目標 5: 性別平等</a></li>
-            <li><a href="#goal6">目標 6: 清潔飲水與衛生設施</a></li>
-            <!-- 添加更多目標 -->
-        </ul>
-    </nav>
+<header>
+    <h1>可持續發展目標 (SDGs)</h1>
+    <p>聯合國2030年可持續發展議程的17個目標</p>
+</header>
 
-    <main>
-        <?php
-        $goals = [
-            1 => "消除貧窮: 確保所有人都能享有貧窮的消除和可持續的發展。",
-            2 => "消除饑餓: 消除所有形式的饑餓，確保每個人都有足夠的食物。",
-            3 => "確保健康生活: 確保健康生活，促進各年齡層的福祉。",
-            4 => "提供優質教育: 確保包容和公平的優質教育，促進終身學習的機會。",
-            5 => "性別平等: 實現性別平等，增強所有女性和女孩的權能。",
-            6 => "清潔飲水與衛生設施: 確保人人能獲得水和衛生設施的可持續管理。",
-            // 这里可以添加更多目标
-        ];
+<section>
+    <h2>什麼是可持續發展目標？</h2>
+    <p>可持續發展目標（SDGs）是聯合國於2015年制定的全球性發展目標，共有17個目標，旨在消除貧困、保護地球和確保全人類享有和平與繁榮。</p>
+</section>
 
-        foreach ($goals as $num => $description) {
-            echo "<section id='goal$num'>";
-            echo "<h2>目標 $num: $description</h2>";
-            echo "</section>";
-        }
-        ?>
-    </main>
+<section>
+    <h2>17個可持續發展目標</h2>
+    <div class="goal">1. 消除貧困</div>
+    <div class="goal">2. 消除飢餓</div>
+    <div class="goal">3. 健康與福祉</div>
+    <div class="goal">4. 優質教育</div>
+    <div class="goal">5. 性別平等</div>
+    <div class="goal">6. 清潔飲水與衛生設施</div>
+    <div class="goal">7. 可再生能源</div>
+    <div class="goal">8. 體面工作與經濟增長</div>
+    <div class="goal">9. 工業、創新與基礎設施</div>
+    <div class="goal">10. 減少不平等</div>
+    <div class="goal">11. 可持續城市與社區</div>
+    <div class="goal">12. 負責任消費與生產</div>
+    <div class="goal">13. 氣候行動</div>
+    <div class="goal">14. 水下生物</div>
+    <div class="goal">15. 陸地生物</div>
+    <div class="goal">16. 和平與公正</div>
+    <div class="goal">17. 促進目標實現的夥伴關係</div>
+</section>
 
-    <footer>
-        <p>版權 &copy; 2024 可持續發展目標網站</p>
-    </footer>
+<section>
+    <h2>了解更多</h2>
+    <p>想了解更多關於可持續發展目標的信息，請訪問 <a href="https://sdgs.un.org/" target="_blank">聯合國可持續發展目標官網</a>。</p>
+</section>
+
 </body>
 </html>
