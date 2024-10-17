@@ -13,7 +13,7 @@
             padding: 20px;
         }
         header {
-            background: #0072bc;
+            background: #1b1e20;
             color: white;
             padding: 10px 0;
             text-align: center;
@@ -28,16 +28,41 @@
         h2 {
             color: #0072bc;
         }
-        .goal {
-            display: inline-block;
-            width: 30%;
-            margin: 1%;
-            text-align: center;
-            border: 1px solid #0072bc;
-            border-radius: 5px;
-            padding: 10px;
-            background: #e7f3ff;
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
         }
+
+        .color-box {
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-weight: bold;
+        }
+        
+       
+        .goal1 .color-box { background-color: #e21b1b; } 
+        .goal2 .color-box { background-color: #bd9458; } 
+        .goal3 .color-box { background-color: #499c2f; }
+        .goal4 .color-box { background-color: #af1c1c; } 
+        .goal5 .color-box { background-color: #df783c; } 
+        .goal6 .color-box { background-color: #00bcd4; } 
+        .goal7 .color-box { background-color: #ffeb3b; } 
+        .goal8 .color-box { background-color: #9c27b0; } 
+        .goal9 .color-box { background-color: #f19b68; }
+        .goal10 .color-box { background-color: #f54dd1; } 
+        .goal11 .color-box { background-color: #f8af42; } 
+        .goal12 .color-box { background-color: #9e7f3b; } 
+        .goal13 .color-box { background-color: #3f5a3c; } 
+        .goal14 .color-box { background-color: #0075d4; } 
+        .goal15 .color-box { background-color: #4caf50; } 
+        .goal16 .color-box { background-color: #1b4f69; } 
+        .goal17 .color-box { background-color: #291583; } 
     </style>
 </head>
 <body>
@@ -54,23 +79,31 @@
 
 <section>
     <h2>17個可持續發展目標</h2>
-    <div class="goal">1. 消除貧困</div>
-    <div class="goal">2. 消除飢餓</div>
-    <div class="goal">3. 健康與福祉</div>
-    <div class="goal">4. 優質教育</div>
-    <div class="goal">5. 性別平等</div>
-    <div class="goal">6. 清潔飲水與衛生設施</div>
-    <div class="goal">7. 可再生能源</div>
-    <div class="goal">8. 體面工作與經濟增長</div>
-    <div class="goal">9. 工業、創新與基礎設施</div>
-    <div class="goal">10. 減少不平等</div>
-    <div class="goal">11. 可持續城市與社區</div>
-    <div class="goal">12. 負責任消費與生產</div>
-    <div class="goal">13. 氣候行動</div>
-    <div class="goal">14. 水下生物</div>
-    <div class="goal">15. 陸地生物</div>
-    <div class="goal">16. 和平與公正</div>
-    <div class="goal">17. 促進目標實現的夥伴關係</div>
+    <div class="section-container">
+        <div class="goal1"><div class="color-box">終結貧困</div></div>
+        <div class="goal2"><div class="color-box">消除飢餓</div></div>
+        <div class="goal3"><div class="color-box">健康與福祉</div></div>
+        <div class="goal4"><div class="color-box">優質教育</div></div>
+        <div class="goal5"><div class="color-box">性別平權</div></div>
+    </div>
+    <div class="section-container">
+        <div class="goal6"><div class="color-box">淨水及衛生</div></div>
+        <div class="goal7"><div class="color-box">可負擔的潔淨能源</div></div>
+        <div class="goal8"><div class="color-box">合適的工作與經濟增長</div></div>
+        <div class="goal9"><div class="color-box">工業、創新與基礎設施</div></div>
+        <div class="goal10"><div class="color-box">減少不平等</div></div>
+    </div>
+    <div class="section-container">
+        <div class="goal11"><div class="color-box">永續城鄉</div></div>
+        <div class="goal12"><div class="color-box">負責任消費與生產</div></div>
+        <div class="goal13"><div class="color-box">氣候行動</div></div>
+        <div class="goal14"><div class="color-box">保護海洋生態</div></div>
+        <div class="goal15"><div class="color-box">保護陸地生態</div></div>
+    </div>
+    <div class="section-container">
+        <div class="goal16"><div class="color-box">和平、正義及健全制度</div></div>
+        <div class="goal17"><div class="color-box">多元化夥伴關係</div></div>
+    </div>
 </section>
 
 <section>
