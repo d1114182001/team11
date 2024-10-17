@@ -80,29 +80,29 @@
 <section>
     <h2>17個可持續發展目標</h2>
     <div class="section-container">
-        <div class="goal1"><div class="color-box">終結貧困</div></div>
-        <div class="goal2"><div class="color-box">消除飢餓</div></div>
-        <div class="goal3"><div class="color-box">健康與福祉</div></div>
-        <div class="goal4"><div class="color-box">優質教育</div></div>
-        <div class="goal5"><div class="color-box">性別平權</div></div>
+        <div class="goal1"><a href="https://sdgs.un.org/goals/goal1" class="color-box">終結貧困</a></div>
+        <div class="goal2"><a href="https://sdgs.un.org/goals/goal2" class="color-box">消除飢餓</a></div>
+        <div class="goal3"><a href="https://sdgs.un.org/goals/goal3" class="color-box">健康與福祉</a></div>
+        <div class="goal4"><a href="https://sdgs.un.org/goals/goal4" class="color-box">優質教育</a></div>
+        <div class="goal5"><a href="https://sdgs.un.org/goals/goal5" class="color-box">性別平權</a></div>
     </div>
     <div class="section-container">
-        <div class="goal6"><div class="color-box">淨水及衛生</div></div>
-        <div class="goal7"><div class="color-box">可負擔的潔淨能源</div></div>
-        <div class="goal8"><div class="color-box">合適的工作與經濟增長</div></div>
-        <div class="goal9"><div class="color-box">工業、創新與基礎設施</div></div>
-        <div class="goal10"><div class="color-box">減少不平等</div></div>
+        <div class="goal6"><a href="https://sdgs.un.org/goals/goal6" class="color-box">淨水及衛生</a></div>
+        <div class="goal7"><a href="https://sdgs.un.org/goals/goal7" class="color-box">可負擔的潔淨能源</a></div>
+        <div class="goal8"><a href="https://sdgs.un.org/goals/goal8" class="color-box">合適的工作與經濟增長</a></div>
+        <div class="goal9"><a href="https://sdgs.un.org/goals/goal9" class="color-box">工業、創新與基礎設施</a></div>
+        <div class="goal10"><a href="https://sdgs.un.org/goals/goal10" class="color-box">減少不平等</a></div>
     </div>
     <div class="section-container">
-        <div class="goal11"><div class="color-box">永續城鄉</div></div>
-        <div class="goal12"><div class="color-box">負責任消費與生產</div></div>
-        <div class="goal13"><div class="color-box">氣候行動</div></div>
-        <div class="goal14"><div class="color-box">保護海洋生態</div></div>
-        <div class="goal15"><div class="color-box">保護陸地生態</div></div>
+        <div class="goal11"><a href="https://sdgs.un.org/goals/goal11" class="color-box">永續城鄉</a></div>
+        <div class="goal12"><a href="https://sdgs.un.org/goals/goal12" class="color-box">負責任消費與生產</a></div>
+        <div class="goal13"><a href="https://sdgs.un.org/goals/goal13" class="color-box">氣候行動</a></div>
+        <div class="goal14"><a href="https://sdgs.un.org/goals/goal14" class="color-box">保護海洋生態</a></div>
+        <div class="goal15"><a href="https://sdgs.un.org/goals/goal15" class="color-box">保護陸地生態</a></div>
     </div>
     <div class="section-container">
-        <div class="goal16"><div class="color-box">和平、正義及健全制度</div></div>
-        <div class="goal17"><div class="color-box">多元化夥伴關係</div></div>
+        <div class="goal16"><a href="https://sdgs.un.org/goals/goal16" class="color-box">和平、正義及健全制度</a></div>
+        <div class="goal17"><a href="https://sdgs.un.org/goals/goal17" class="color-box">多元化夥伴關係</a></div>
     </div>
 </section>
 
