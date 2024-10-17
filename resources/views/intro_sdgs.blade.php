@@ -18,6 +18,8 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }.test{
+            overflow: visible;
         }
     </style>
 </head>
@@ -78,6 +80,7 @@
     <div class="goal">
         <h3>13. 氣候行動</h3>
         <p>採取緊急行動應對氣候變化及其影響。</p>
+        <img src="/pictures/test.png" alt="Cover Image"/>
     </div>
     <div class="goal">
         <h3>14. 海洋生態</h3>
