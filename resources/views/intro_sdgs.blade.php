@@ -34,15 +34,15 @@
         }
 
         .color-box {
-            width: 200px;
-            height: 200px;
-            margin: 5px;
-            border-radius: 3px;
+            width: 220px; /* 增加宽度 */
+             height: 220px; /* 增加高度 */
+             margin: 5px; /* 保持原有的外边距 */
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: black;
-            font-weight: bold;
+            flex-direction: column; /* 使内容垂直排列 */
+            align-items: center; /* 中心对齐内容 */
+            justify-content: center; /* 垂直居中内容 */
+            text-decoration: none; /* 去掉链接下划线 */
+            color: black; /* 设置文本颜色 */
         }
         
        
@@ -80,7 +80,12 @@
 <section>
     <h2>17個可持續發展目標</h2>
     <div class="section-container">
-        <div class="goal1"><a href="https://sdgs.un.org/goals/goal1" class="color-box">終結貧困</a></div>
+        <div class="goal1">
+            <a href="https://sdgs.un.org/goals/goal1" class="color-box">
+                <img src="PICTURE/1.jpg" width="100"><br>
+                終結貧困
+            </a>
+        </div>
         <div class="goal2"><a href="https://sdgs.un.org/goals/goal2" class="color-box">消除飢餓</a></div>
         <div class="goal3"><a href="https://sdgs.un.org/goals/goal3" class="color-box">健康與福祉</a></div>
         <div class="goal4"><a href="https://sdgs.un.org/goals/goal4" class="color-box">優質教育</a></div>
