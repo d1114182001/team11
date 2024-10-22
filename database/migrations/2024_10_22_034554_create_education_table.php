@@ -1,0 +1,55 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateEducationTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('education', function (Blueprint $table) {
+            $table->id();
+            $table->string('district_or_region')->comment('地區別');
+            $table->integer('total_thousand')->comment('總計 (千人)');
+            $table->integer('junior_high_below_total')->nullable()->comment('國中及以下合計 (千人)');
+            $table->integer('junior_high_below_primary_total')->nullable()->comment('國小及以下 (千人)');
+            $table->integer('junior_high_total')->nullable()->comment('國中 (千人)');
+            $table->integer('senior_high_total')->nullable()->comment('高級中等 (千人)');
+            $table->integer('junior_college_above_total')->nullable()->comment('大專及以上合計 (千人)');
+            $table->integer('junior_college_total')->nullable()->comment('專科 (千人)');
+            $table->integer('university_total')->nullable()->comment('大學 (千人)');
+            $table->integer('graduate_school_total')->nullable()->comment('研究所 (千人)');
+            $table->integer('age_15_24_total')->nullable()->comment('年齡 15-24歲合計 (千人)');
+            $table->integer('age_15_19_total')->nullable()->comment('15-19歲 (千人)');
+            $table->integer('age_20_24_total')->nullable()->comment('20-24歲 (千人)');
+            $table->integer('age_25_44_total')->nullable()->comment('年齡 25-44歲合計 (千人)');
+            $table->integer('age_25_29_total')->nullable()->comment('25-29歲 (千人)');
+            $table->integer('age_30_34_total')->nullable()->comment('30-34歲 (千人)');
+            $table->integer('age_35_39_total')->nullable()->comment('35-39歲 (千人)');
+            $table->integer('age_40_44_total')->nullable()->comment('40-44歲 (千人)');
+            $table->integer('age_45_64_total')->nullable()->comment('年齡 45-64歲合計 (千人)');
+            $table->integer('age_45_49_total')->nullable()->comment('45-49歲 (千人)');
+            $table->integer('age_50_54_total')->nullable()->comment('50-54歲 (千人)');
+            $table->integer('age_55_59_total')->nullable()->comment('55-59歲 (千人)');
+            $table->integer('age_60_64_total')->nullable()->comment('60-64歲 (千人)');
+            $table->integer('age_65_above_total')->nullable()->comment('年齡 65歲及以上 (千人)');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('education');
+    }
+}
