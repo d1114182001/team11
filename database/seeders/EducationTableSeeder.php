@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class EducationTableSeeder extends Seeder
 {
 
-        /**
+    /**
      * Seed the application's database.
      *
      * @return void
@@ -44,6 +45,7 @@ class EducationTableSeeder extends Seeder
             $age55to59 = rand(5, 500);
             $age60to64 = rand(4, 300);
             $age30to34 = rand(6, 800);
+            $age65UP = rand(1, 200);
 
             // 初始化總和變數
             $totalThousand = 0;
@@ -84,7 +86,9 @@ class EducationTableSeeder extends Seeder
                     'age_50_54' => $age50to54,
                     'age_55_59' => $age55to59,
                     'age_60_64' => $age60to64,
-                    'age_65_above_total' => rand(1, 200),
+                    'age_65_above_total' => $age65UP,
+                    'created_at' => Carbon :: now(),
+                    'updated_at' => Carbon :: now()
                 ]
             ]);
         }
