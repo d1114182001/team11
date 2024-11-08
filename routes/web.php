@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EducationContro;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/sdgs', function () {
-    return view('intro_sdgs');
-});
+
+Route::get('education',[EducationContro::class,"index"]);
