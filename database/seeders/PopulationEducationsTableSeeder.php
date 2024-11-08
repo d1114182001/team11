@@ -14,11 +14,33 @@ class PopulationEducationsTableSeeder extends Seeder
      */
     public function run()
     {
-        $Distrits=array('新北市 New Taipei City','臺北市 Taipei City','桃園市 Taoyuan City','基隆市 Keelung City','新竹市 Hsinchu City','宜蘭縣 Yilan County','新竹縣 Hsinchu County','臺中市 Taichung City','苗栗縣 Miaoli County','彰化縣 Changhua County'.'南投縣 Nantou County','雲林縣 Yunlin County','臺南市 Tainan City','高雄市 Kaohsiung City','嘉義市 Chiayi City','嘉義縣 Chiayi County','屏東縣 Pingtung County','澎湖縣 Penghu County','臺東縣 Taitung County','花蓮縣 Hualien County');
-        $distrits = $Distrits[array_rand($Distrits)];
+        
         
         for ($i=0; $i<20; $i++)
         {
+            $Distrits = array(
+                '新北市 New Taipei City',
+                '臺北市 Taipei City',
+                '桃園市 Taoyuan City',
+                '基隆市 Keelung City',
+                '新竹市 Hsinchu City',
+                '宜蘭縣 Yilan County',
+                '新竹縣 Hsinchu County',
+                '臺中市 Taichung City',
+                '苗栗縣 Miaoli County',
+                '彰化縣 Changhua County',
+                '南投縣 Nantou County',
+                '雲林縣 Yunlin County',
+                '臺南市 Tainan City',
+                '高雄市 Kaohsiung City',
+                '嘉義市 Chiayi City',
+                '嘉義縣 Chiayi County',
+                '屏東縣 Pingtung County',
+                '澎湖縣 Penghu County',
+                '臺東縣 Taitung County',
+                '花蓮縣 Hualien County'
+            );
+            $distrits = $Distrits[$i];
             $edu_jr_high = rand(1, 200);
             $edu_primary_below = rand(0, 80);
             $edu_jr_high_below_total =$edu_jr_high+$edu_primary_below;
