@@ -1,0 +1,31 @@
+nav{
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: #C5192C; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.container{
+  display: flex; align-items: center; padding: 10px 20px; max-width: 100%; box-sizing: border-box;
+  }
+  
+  img{
+    margin-right: 20px;
+  }
+  
+  ul{
+    display: flex; list-style: none; margin: 0; padding: 0; justify-content: flex-start;
+  }
+  nav li{
+    display: inline;
+    padding: 10px 20px;
+    float: right;
+    margin-right: 20px;
+  }
+  /* 滑鼠浮動特效 */
+  nav li:hover{ 
+    background-color: #7A918D;
+    opacity: 0.5; }   
+  nav a{
+    padding: 0 10px;
+  }
+  .content{
+    
+    padding-top:100px;
+  }
