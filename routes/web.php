@@ -19,5 +19,4 @@ Route::get('/', function () {
 });
 
 
-
 Route::get('education',[EducationContro::class,"index"]);
