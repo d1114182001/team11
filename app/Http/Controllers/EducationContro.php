@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\EducationOfEmployed;
+use App\Models\EducationModels;
 
 
 class EducationContro extends Controller
@@ -15,7 +15,7 @@ class EducationContro extends Controller
      */
     public function index()
     {
-        $Ed = EducationOfEmployed:: all();
+        $Ed = EducationModels:: all();
         return view('ed.ed',compact('Ed'));
     }
 

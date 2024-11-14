@@ -4,25 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDG 4 - 質量教育</title>
-    <div class="related-links">
-        <h3>相關連結</h3>
-        <ul>
-            <li><a href="https://www.un.org/sustainabledevelopment/education/" target="_blank">聯合國 SDG 4 資源</a></li>
-            <li><a href="https://www.unesco.org/en/education" target="_blank">UNESCO 教育部門</a></li>
-            <li><a href="https://www.worldbank.org/en/topic/education" target="_blank">世界銀行 - 教育</a></li>
-            <li><a href="https://www.educationglobalagenda.org/" target="_blank">全球教育議程</a></li>
-            <li><a href="https://www.moe.edu.tw/" target="_blank">教育部官方網站</a></li>
-        </ul>
-    </div>
     <style>
-        
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #c9ebed;
         }
-
         header {
             background: linear-gradient(to right, #e92f2f, #d16e16);
             color: white;
@@ -30,17 +18,14 @@
             padding: 30px 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-
         header h1 {
             margin: 0;
             font-size: 3em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-
         .content {
             padding: 40px 20px;
         }
-
         .sdg-section {
             background-color: #ffffff;
             margin: 20px 0;
@@ -48,44 +33,39 @@
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
         }
-
         .sdg-section:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
-
         .sdg-section h3 {
             font-size: 1.8em;
             color: #e92f2f;
             font-weight: bold;
         }
-
         .sdg-section p {
             font-size: 1.2em;
             line-height: 1.6;
             color: #333;
         }
-
         .sdg-section .sdg-detail {
             background-color: #f1f5f8;
             border-left: 5px solid #1a1244;
             padding-left: 20px;
             margin-top: 15px;
         }
-
         .sdg-section .sdg-detail ul {
             padding-left: 20px;
             color: #005c99;
         }
-
         .sdg-section .sdg-detail li {
             margin-bottom: 10px;
             font-size: 1.1em;
         }
-
         .cta-btn {
-            background-color: #00b0ff;
+            background-color: #ff0000;
             color: rgb(255, 255, 255);
             padding: 15px 40px;
             border: none;
@@ -96,19 +76,15 @@
             display: block;
             margin: 40px auto;
         }
-
         .cta-btn:hover {
-            background-color: #0073e6;
+            background-color: #e60000;
             transform: scale(1.05);
         }
-
-        /* 圖片區塊設計 */
         .image-item {
             text-align: center;
             flex: 1;
             padding: 10px;
         }
-
         .image-item img {
             width: 250px;
             height: 250px;
@@ -117,18 +93,9 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease;
         }
-
         .image-item img:hover {
             transform: scale(1.1);
         }
-
-        .image-item h3 {
-            font-weight: bold;
-            margin-top: 15px;
-            font-size: 1.3em;
-            color: #fff;
-        }
-
         .image-row {
             display: flex;
             justify-content: space-around;
@@ -139,19 +106,60 @@
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-
-        /* 文字與視覺設計 */
-        .sdg-section h3 {
-            font-size: 1.8em;
-            color: #d32f2f;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .image-item h3 {
+            color: #ffffff; /* 將文字顏色設置為白色 */
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 添加陰影增強可讀性 */
+            margin: 10px 0;
+        }
+        .related-links {
+            background: linear-gradient(135deg, #e6e6e6, #f5f5f5);
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        /* 動畫和視覺效果 */
-        .sdg-section {
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
+        .related-links:hover {
+            transform: scale(1.02);
+        }
+
+        .related-links h3 {
+            font-size: 2em;
+            color: #d14545;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .related-links ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .related-links ul li {
+            margin: 15px 0;
+            font-size: 1.2em;
+        }
+
+        .related-links ul li a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .related-links ul li a:hover {
+            color: #d14545;
+            border-bottom: 2px solid #d14545;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
         }
 
         @keyframes fadeIn {
@@ -161,44 +169,6 @@
             to {
                 opacity: 1;
             }
-        }
-
-        .related-links {
-            background-color: #f1f5f8;
-            padding: 30px;
-            margin-top: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .related-links h3 {
-            font-size: 1.8em;
-            color: #e92f2f;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .related-links ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .related-links ul li {
-            margin: 10px 0;
-            font-size: 1.2em;
-        }
-
-        .related-links ul li a {
-            color: #005c99;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .related-links ul li a:hover {
-            color: #e92f2f;
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -354,6 +324,16 @@
                     <li>強化教育領域的基礎設施，支持教師的職業發展和教學資源。</li>
                 </ul>
             </div>
+        </div>
+
+        <div class="related-links">
+            <h3>相關連結</h3>
+            <ul>
+                <li><a href="https://official.junyiacademy.org/about/history/" target="_blank">均一平台</a></li>
+                <li><a href="https://taise.org.tw/post-view.php?ID=298" target="_blank">「西雅圖承諾」讓弱勢青年免費讀社區大學</a></li>
+                <li><a href="https://www.seinsights.asia/specialfeature/7782#7838" target="_blank">迷途少年變身咖啡師！書屋花甲助上百位青年獲專業證照、重拾生活熱忱</a></li>
+                <li><a href="https://www.un.org/sustainabledevelopment/education/" target="_blank">聯合國 SDG 4 資源</a></li>
+            </ul>
         </div>
         
         <a href="{{ url('education') }}">
