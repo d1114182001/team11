@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/sdgs', [PopulationEducationsController::class,'index']);
+Route::get('/about', [PopulationEducationsController::class,'about'])->name('about');;
 
