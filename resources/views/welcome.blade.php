@@ -344,7 +344,7 @@
         </div>
         
         <a href="{{ url('education') }}">
-            <button class="cta-btn">資料表前往</button>
+            <button class="cta-btn">點擊前往資料表</button>
         </a>
 </div>
 
