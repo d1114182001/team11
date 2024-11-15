@@ -161,6 +161,9 @@
             border-bottom: 2px solid #d14545;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
         }
+        .image-item p {
+            color: white;
+        }
 
         @keyframes fadeIn {
             from {
@@ -182,17 +185,21 @@
 <div class="image-row">
     <div class="image-item">
         <h3>確保有教無類</h3>
+        <p>提供每個人平等的受教育機會，無論背景或能力。</p>
         <img src="/PICTURE/2.jpg" alt="有教無類">
     </div>
     <div class="image-item">
         <h3>公平以及高品質的教育</h3>
+        <p>倡導公平的教育體系，確保學習資源的普及與高品質。</p>
         <img src="/PICTURE/下載.png" alt="公平教育">
     </div>
     <div class="image-item">
         <h3>提倡終身學習</h3>
+        <p>鼓勵持續學習，支持知識更新以適應時代發展。</p>
         <img src="/PICTURE/study.png" alt="終身學習">
     </div>
 </div>
+
 
 
 <div class="content">
@@ -332,7 +339,7 @@
                 <li><a href="https://official.junyiacademy.org/about/history/" target="_blank">均一平台</a></li>
                 <li><a href="https://taise.org.tw/post-view.php?ID=298" target="_blank">「西雅圖承諾」讓弱勢青年免費讀社區大學</a></li>
                 <li><a href="https://www.seinsights.asia/specialfeature/7782#7838" target="_blank">迷途少年變身咖啡師！書屋花甲助上百位青年獲專業證照、重拾生活熱忱</a></li>
-                <li><a href="https://www.un.org/sustainabledevelopment/education/" target="_blank">聯合國 SDG 4 資源</a></li>
+                <li><a href="https://www.un.org/sustainabledevelopment/education/" target="_blank">聯合國 SDG 4 </a></li>
             </ul>
         </div>
         
