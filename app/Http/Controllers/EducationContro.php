@@ -16,7 +16,7 @@ class EducationContro extends Controller
     public function index()
     {
         $Ed = EducationModels:: all();
-        return view('ed.ed',compact('Ed'));
+        return view('ed.app',compact('Ed'));
     }
 
     /**
