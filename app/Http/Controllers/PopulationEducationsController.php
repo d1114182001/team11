@@ -17,7 +17,7 @@ class PopulationEducationsController extends Controller
     {
         $pop = Population::all();
         
-        return view('populationEducations.populationEducations',compact('pop'));
+        return view('populationEducations',compact('pop'));
     }
 
     /**

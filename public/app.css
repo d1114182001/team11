@@ -60,6 +60,55 @@ nav a{
 }
 
 /*卡片區*/
+/* header */
+/* 設定 header 背景與佈局 */
+.sdg-header {
+  background-color: #76e2d9; /* 藍綠色背景，代表環境和可持續性 */
+  color: white; /* 文字顏色為白色 */
+  padding: 50px 20px; /* 上下內邊距，讓內容不緊貼邊緣 */
+  text-align: center; /* 文字居中 */
+}
+
+/* 設定 logo 圖片 */
+.sdg-logo {
+  width: 220px; /* 限制圖片大小 */
+  margin-bottom: 20px; /* 圖片與文字之間的間距 */
+}
+
+/* 設定文字內容區域 */
+.sdg-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 設定標題 */
+.sdg-header h1 {
+  font-size: 36px; /* 字體大小 */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 設定描述文字 */
+.sdg-header p {
+  font-size: 18px;
+  margin-top: 10px; /* 標題與文字之間的間距 */
+}
+
+/* 響應式設計：當視口寬度小於600px時 */
+@media (max-width: 600px) {
+  .sdg-header {
+      padding: 30px 10px; /* 減少內邊距 */
+  }
+  
+  .sdg-header h1 {
+      font-size: 28px; /* 當屏幕較小時減小字體大小 */
+  }
+  
+  .sdg-header p {
+      font-size: 16px; /* 減小段落字體大小 */
+  }
+}
 
 /* 卡片樣式 */
 .card-container { 
@@ -148,3 +197,46 @@ th {
 tr:hover {
   background-color: #edacac;
 }
+/*footer*/
+/* 整體footer樣式 */
+footer {
+  background-color: #333; /* 深色背景 */
+  color: white; /* 文字顏色設為白色 */
+  padding: 20px 0; /* 上下內邊距 */
+  text-align: center; /* 文字置中 */
+}
+
+/* footer內容區域 */
+.footer-content {
+  max-width: 1200px; /* 最大寬度 */
+  margin: 0 auto; /* 使footer內容置中 */
+  padding: 0 20px; /* 內邊距 */
+}
+
+/* 使段落標籤的間距更大 */
+footer p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* 使鏈接顯示為白色並無下劃線 */
+footer a {
+  color: white;
+  text-decoration: none; /* 去掉下劃線 */
+}
+
+footer a:hover {
+  text-decoration: underline; /* 當鼠標懸停時顯示下劃線 */
+}
+
+/* 響應式設計：當視口寬度小於600px時 */
+@media (max-width: 600px) {
+  footer {
+      font-size: 12px; /* 當屏幕較小時減小文字大小 */
+  }
+
+  .footer-content {
+      padding: 0 10px; /* 減少內邊距 */
+  }
+}
+

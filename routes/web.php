@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/sdgs', [PopulationEducationsController::class,'index']);
+/*Route::get('/', function () {
+    return view('populationEducations');
+});*/
+
+Route::get('/', [PopulationEducationsController::class,'index']);
 Route::get('/about', [PopulationEducationsController::class,'about'])->name('about');;
 
