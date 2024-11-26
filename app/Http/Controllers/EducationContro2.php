@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\EducationModels;
+use App\Models\EducationModels2;
 
 
-class EducationContro extends Controller
+class EducationContro2 extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class EducationContro extends Controller
      */
     public function index()
     {
-        $Ed = EducationModels:: all();
-        return view('ed.edview',compact('Ed'));
+        $Ed2 = EducationModels2:: all();
+        return view('ed2.ed2view',compact('Ed2'));
     }
 
     /**
