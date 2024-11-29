@@ -18,5 +18,8 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 Route::get('/', [PopulationEducationsController::class,'index']);
-Route::get('/about', [PopulationEducationsController::class,'about'])->name('about');;
+Route::get('/about', [PopulationEducationsController::class,'about'])->name('about');
+Route::get('/{id}',[PopulationEducationsController::class,'show'])->where('id','[0-9]+')->name('region.show');
+Route::get('/{id}/edit',[PopulationEducationsController::class,'edit'])->where('id','[0-9]+')->name('region.edit');
+Route::delete('/delete/{id}',[PopulationEducationsController::class,'destroy'])->where('id','[0-9]+')->name('region.destroy');
 

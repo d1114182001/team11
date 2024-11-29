@@ -3,27 +3,12 @@
         <title>@yield('title', '我國教育人口')</title>
         <link rel="stylesheet" href="{{ asset('/app.css') }}">     
     </head>
-    @if(isset($pop) && $pop->isNotEmpty())
-                @include('particials.navbar', ['navbarImage' => '/pictures/E_SDG_Icons-04.jpg', 'navbarText' => 'Quality Education(優質教育)'])
-            @else
-                @yield('navbar')
-            @endif
-    <header>
-        @if(isset($pop) && $pop->isNotEmpty())
-            <div class="image"><img src="/pictures/62f0da478154a8e89b69f0a4_SDG目標04.png" alt="Cover Image"/></div>
-        @else
-            @yield('header')
-        @endif
-    </header>
+    
+        @include('particials.navbar', ['navbarImage' => '/pictures/E_SDG_Icons-04.jpg', 'navbarText' => 'Quality Education(優質教育)'])
     <body>
         
         <main>
-            
-            <!-- 給主模板的主要內容 -->
-            @if(isset($pop) && $pop->isNotEmpty())
-                
-                @include('card')
-                <h1>就業者之教育程度與年齡</h1>
+            <h1>就業者之教育程度與年齡</h1>
                 <table border="1">
                     <tr>
                         <td>台灣縣市區域</td>
@@ -38,7 +23,7 @@
                         <td>操作2</td>
                         <td>操作3</td>
                     </tr>
-                    @foreach ($pop as $populations)
+                    
                         <tr>
                             <td>{{ $populations->region }}</td>
                             <td>{{ $populations->total }}</td>
@@ -58,11 +43,8 @@
                                 </form>
                             </td>
                         </tr>
-                    @endforeach
+                    
                 </table>
-            @else     
-            @endif
-                @yield('content') <!-- 預留給子模板定義主要內容 -->
         </main>
         
         @include('footer')

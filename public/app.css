@@ -1,6 +1,6 @@
 /*navbar*/
 nav{
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1; background-color: #C5192C; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky; top: 0; left: 0; right: 0; z-index: 1; background-color: #C5192C; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .container{
   display: flex; align-items: center; padding: 10px 20px; max-width: 100%; box-sizing: border-box;
@@ -63,26 +63,19 @@ nav a{
 /* header */
 /* 設定 header 背景與佈局 */
 
-
-/* 設定 logo 圖片 
 .sdg-logo {
-  width: 220px;
-  padding-top: 100%; /* 限制圖片大小 
+  width: 1220px;
   margin-bottom: 10px;
-  height:100%;
-  width:100%; /* 圖片與文字之間的間距 
+  height:400px;
+   /* 圖片與文字之間的間距*/ 
 }
-*/
+
 
 /* 設定文字內容區域 */
 .sdg-header-content {
   background-color: #76e2d9; /* 藍綠色背景，代表環境和可持續性 */
   color: white; /* 上下內邊距，讓內容不緊貼邊緣 */
   text-align: center; /* 文字居中 */
- 
-  position: sticky;
-  
-  align-items: center;
   
 }
 
@@ -97,7 +90,14 @@ nav a{
 /* 設定描述文字 */
 .sdg-header p {
   font-size: 18px;
-  margin-top: 10px; /* 標題與文字之間的間距 */
+  margin-bottom: 10px; /* 標題與文字之間的間距 */
+  
+}
+
+.sdg-text{
+  margin-bottom: 20px;
+  display:grid;
+
 }
 
 /* 響應式設計：當視口寬度小於600px時 */

@@ -50,6 +50,9 @@ class PopulationEducationsController extends Controller
     public function show($id)
     {
         //
+        $populations=Population::findOrFail($id);
+        return view('showdata')->with('populations',$populations);
+
     }
 
     /**
@@ -84,6 +87,9 @@ class PopulationEducationsController extends Controller
     public function destroy($id)
     {
         //
+        $populations=Population::findOrFail($id);
+        $populations->delete();
+        return redirect('/');
     }
     public function about()
     {
