@@ -178,9 +178,8 @@
 
 <body>
 
-
-
     @include("template.welcomeheader")
+    
     
     <div class="content">
         @yield('content')

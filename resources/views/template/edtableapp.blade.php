@@ -29,7 +29,7 @@
             margin-top: 40px;
         }
         h1 {
-            color: #a793ff;
+            color: #200f6b;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -85,6 +85,8 @@
 
     <!-- 引入头部 -->
     @include('template.edtableheader')
+
+    <h1>@yield('viewtital','請輸入')</h1>
 
     <div class="container">
         @yield('content')  <!-- 这里是页面特定内容 -->

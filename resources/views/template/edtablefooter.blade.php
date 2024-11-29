@@ -1,6 +1,6 @@
 <!-- footer.html -->
 <a href="{{ url('/') }}"> 
-    <button class="cta-btn">點擊返回</button> 
+    <button class="cta-btn">返回主頁</button> 
 </a>
 
 

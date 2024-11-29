@@ -2,8 +2,11 @@
 
 @section('title', '工作者的年齡')  <!-- 定义页面标题 -->
 
+@section('viewtital','各地區工作者的工作者的年齡') 
+
 @section('content')
-    <h1>各地區工作者的教育程度</h1>
+
+    <a href="{{ url('education') }}">返回上一頁</a>
 
     <table>
         <tr>
