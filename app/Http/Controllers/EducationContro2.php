@@ -48,7 +48,9 @@ class EducationContro2 extends Controller
      */
     public function show($id)
     {
-        //
+        $Ed3 = EducationModels2:: findOrFail($id);
+
+        return view('ed2.ed2show',compact('Ed3'));
     }
 
     /**
@@ -82,6 +84,9 @@ class EducationContro2 extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Ed3 = EducationModels2:: findOrFail($id);
+        $Ed3->delete();
+
+        return redirect('education2');
     }
 }

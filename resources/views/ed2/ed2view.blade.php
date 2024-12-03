@@ -23,6 +23,8 @@
             <th>55-59歲 (千人)</th>
             <th>60-64歲 (千人)</th>
             <th>65歲及以上 (千人)</th>
+            <th>操作1</th>
+            <th>操作2</th>
         </tr>
         @foreach ($Ed2 as $Ed3)
             <tr>
@@ -39,6 +41,14 @@
                 <td>{{ $Ed3->age_55_59 }}</td>
                 <td>{{ $Ed3->age_60_64 }}</td>
                 <td>{{ $Ed3->age_65_above_total }}</td>
+                <td><a href="{{route('ed2.ed2show',['id' => $Ed3 ->id])}}">顯示</a></td>
+                <td>
+                    <form action="{{ url('/education2/delete', ['id' => $Ed3->id])}}"method="post">
+                        <input class="btn btn-default" type="submit" value="刪除" />
+                        @method('delete')
+                        @csrf
+                    </form>
+                </td>
             </tr>
         @endforeach
     </table>

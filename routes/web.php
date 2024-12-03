@@ -28,3 +28,5 @@ Route::delete('education/delete/{id}',[EducationContro::class,"destroy"])->where
 
 
 Route::get('education2',[EducationContro2::class,"index"]);
+Route::get('education2/{id}',[EducationContro2::class,"show"])->where('id','[0-9]+')->name('ed2.ed2show');
+Route::delete('education2/delete/{id}',[EducationContro2::class,"destroy"])->where('id','[0-9]+')->name('ed2.ed2destroy');
