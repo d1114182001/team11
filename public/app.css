@@ -40,6 +40,9 @@ nav a{
 .content{
     padding-top:120px;
 }
+p{
+  white-space:pre-wrap;
+}
 .image{
   display: flex;
   justify-content: center; /* 水平居中 */
