@@ -25,6 +25,7 @@ Route::get('/', function () {
 Route::get('education',[EducationContro::class,"index"]);
 Route::get('education/{id}',[EducationContro::class,"show"])->where('id','[0-9]+')->name('ed.edshow');
 Route::delete('education/delete/{id}',[EducationContro::class,"destroy"])->where('id','[0-9]+')->name('ed.eddestroy');
+Route::get('education/create', [EducationContro::class,"create"])->name('ed.edcreate');
 
 
 Route::get('education2',[EducationContro2::class,"index"]);

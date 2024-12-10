@@ -6,6 +6,8 @@
 
 @section('content')
 
+    <a href="{{ route('ed.edcreate') }}">新增數據</a>
+
     <a href="{{ url('education2') }}">查看其他數據</a>
 
     <table>

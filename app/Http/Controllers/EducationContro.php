@@ -26,7 +26,7 @@ class EducationContro extends Controller
      */
     public function create()
     {
-        //
+        return view('ed.edcreate');
     }
 
     /**
