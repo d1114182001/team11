@@ -39,6 +39,8 @@
             font-weight: bold;
             font-size: 18px;
         }
+
+
     /* 定义基本的表格样式 */
     table {
         width: 100%;
@@ -88,14 +90,17 @@
             transform: scale(1.05);
         }
 
-    .form-label {
+
+
+
+
+
+    .form-group label {
         font-size: 1.1rem;
         font-weight: bold;
-        color: #333;
-        margin-bottom: 0.5rem;
-        display: inline-block; /* 改为inline-block，使文字和输入框可以并排 */
-        width: auto;  /* 使文字宽度自动适应 */
-        margin-right: 1rem; /* 控制文字与输入框之间的间距 */
+        color: #555;
+        margin-right: 1rem; /* 标签与输入框之间的间距 */
+        width: 150px; /* 设置所有标签的宽度，使其对齐 */
     }
 
     .form-group {
@@ -135,6 +140,33 @@
         background-color: #0056b3;
         border-color: #004085;
     }
+
+    .age-data15_24{
+        background-color: #facda5
+    }
+
+    .age-data25_44{
+        background-color: #fadfa5
+    }
+
+    .age-data45_64{
+        background-color: #faeda5
+    }
+
+    .age-data64{
+        background-color: #bfe05c
+    }
+    .basic-data {
+        background-color: #f5e1e1; /* 浅灰色背景 */
+    }
+
+    .basic-data, .age-data15_24, .age-data25_44, .age-data45_64, .age-data64 {
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+
     </style>
 </head>
 <body>
