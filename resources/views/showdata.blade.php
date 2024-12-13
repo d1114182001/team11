@@ -9,6 +9,7 @@
         
         <main>
             <h1>就業者之教育程度與年齡</h1>
+            <a href="{{route('region.create')}}">新增地區資料</a>
                 <table border="1">
                     <tr>
                         <td>台灣縣市區域</td>
