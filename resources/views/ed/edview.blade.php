@@ -24,6 +24,7 @@
             <th>研究所 (千人)</th>
             <th>操作1</th>
             <th>操作2</th>
+            <th>操作3</th>
         </tr>
 
         @foreach ($Ed as $Ed1)
@@ -39,6 +40,7 @@
                 <td>{{ $Ed1->university_total }}</td>
                 <td>{{ $Ed1->graduate_school_total }}</td>
                 <td><a href="{{route('ed.edshow',['id' => $Ed1 ->id])}}">顯示</a></td>
+                <td><a href="{{ route('ed.ededit', ['id' => $Ed1->id]) }}" class="btn btn-warning">修改</a></td>
                 <td>
                     <form action="{{ url('/education/delete', ['id' => $Ed1->id])}}"method="post">
                         <input class="btn btn-default" type="submit" value="刪除" />

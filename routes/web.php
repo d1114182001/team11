@@ -27,6 +27,8 @@ Route::get('education/{id}',[EducationContro::class,"show"])->where('id','[0-9]+
 Route::delete('education/delete/{id}',[EducationContro::class,"destroy"])->where('id','[0-9]+')->name('ed.eddestroy');
 Route::get('education/create', [EducationContro::class,"create"])->name('ed.edcreate');
 Route::post('education/store', [EducationContro::class, 'store'])->name('ed.store');
+Route::get('education/{id}/edit',[EducationContro::class,"edit"])->where('id','[0-9]+')->name('ed.ededit');
+Route::patch('education/update/{id}',[EducationContro::class,"update"])->where('id','[0-9]+')->name('ed.edupdate');
 
 
 Route::get('education2',[EducationContro2::class,"index"]);

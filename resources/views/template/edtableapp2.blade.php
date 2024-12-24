@@ -41,6 +41,8 @@
         }
 
 
+
+
     /* 定义基本的表格样式 */
     table {
         width: 100%;
@@ -89,8 +91,6 @@
             background-color: #e60000;
             transform: scale(1.05);
         }
-
-
 
 
 

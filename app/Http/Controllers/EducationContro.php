@@ -105,7 +105,9 @@ class EducationContro extends Controller
      */
     public function edit($id)
     {
-        //
+        $Ed1 = EducationModels:: findOrFail($id);
+
+        return view('ed.ededit',compact('Ed1'));
     }
 
     /**
@@ -117,7 +119,53 @@ class EducationContro extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Ed1 = EducationModels:: findOrFail($id);
+
+        $data = $request->only(
+            [
+                'district_or_region',
+                'junior_high_below_total',
+                'junior_high_below_primary_total',
+                'junior_high_total',
+                'senior_high_total',
+                'junior_college_above_total',
+                'junior_college_total',
+                'university_total',
+                'graduate_school_total',
+                'age_15_19',
+                'age_20_24',
+                'age_25_29',
+                'age_30_34',
+                'age_35_39',
+                'age_40_44',
+                'age_45_49',
+                'age_50_54',
+                'age_55_59',
+                'age_60_64',
+                'age_65_above_total',
+            ]
+        );
+
+        $data['total_thousand'] = 0;
+        $data['age_15_24_total'] = 0;
+        $data['age_25_44_total'] = 0;
+        $data['age_45_64_total'] = 0;
+
+
+        $data['total_thousand'] = $data['junior_high_below_total'] + $data['junior_high_below_primary_total'] + $data['junior_high_total']
+        + $data['senior_high_total'] + $data['junior_college_above_total'] + $data['junior_college_total']
+        + $data['university_total'] + $data['graduate_school_total'];
+
+        // 可以根據具體邏輯調整如何計算總數
+        $data['age_15_24_total'] = $data['age_15_19'] + $data['age_20_24'];
+        $data['age_25_44_total'] = $data['age_25_29'] + $data['age_30_34'] + $data['age_35_39'] + $data['age_40_44'];
+        $data['age_45_64_total'] = $data['age_45_49'] + $data['age_50_54'] + $data['age_55_59'] + $data['age_60_64'];
+        
+        
+        $Ed1 ->fill($data);
+        $Ed1 -> save();
+
+        return redirect('education');
     }
 
     /**
