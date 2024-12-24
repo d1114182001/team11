@@ -92,6 +92,8 @@ class PopulationEducationsController extends Controller
     public function edit($id)
     {
         //
+        $populations=Population::findOrFail($id);
+        return view('editdata')->with('populations',$populations);
     }
 
     /**
