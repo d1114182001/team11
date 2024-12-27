@@ -8,7 +8,7 @@
 
 <a href="{{ url('education') }}">返回上一頁</a>
 
-
+@include("message.list")
 {!! Form::open(['url' => 'education/store']) !!}
 @include("template.edform",['SBTT'=>'創建資料'])
 {!! Form::close() !!}
