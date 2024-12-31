@@ -17,6 +17,7 @@
 @section('navbar')
     @include('particials.navbar', ['navbarImage' => '/pictures/sdg_nav.png', 'navbarText' => '可持續發展目標 (SDG)'])
 @endsection
+
 @section('content')
     <h1>SDG 是什麼?</h1>
     <p>SDG 是「可持續發展目標」(Sustainable Development Goals) 的縮寫。
@@ -24,3 +25,4 @@
     <h1>17個目標</h1>
     
 @endsection
+

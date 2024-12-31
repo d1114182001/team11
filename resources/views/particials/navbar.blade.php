@@ -10,7 +10,7 @@
               <a href="http://sdg04.lhu.edu.tw/">Home</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#">contact</a>
             </li>
             <li>
               <a href="{{ route('about') }}">About Other SDG</a>

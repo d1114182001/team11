@@ -9,8 +9,8 @@
     <body>
         
         <main>
-            <h1>就業者之教育程度與年齡</h1>
-            
+            <h1>修改其中一筆就業者之教育程度與年齡</h1>
+            @include('messagelist')
             {!! Form::model($populations, ['method'=>'PATCH', 'action'=>['\App\Http\Controllers\PopulationEducationsController@update', $populations->id]]) !!}
 
             <div class="form-group">
@@ -111,7 +111,7 @@
             </div>
                       
             <div class="form-group">
-                {!! Form::submit('新增地區教育人口詳細資料', ['class'=>'btn btn-primary form-control']) !!}
+                {!! Form::submit('修改地區教育人口詳細資料', ['class'=>'btn btn-primary form-control']) !!}
             </div>
             {!! Form::close() !!}
         </main>

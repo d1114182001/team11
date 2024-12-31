@@ -154,4 +154,6 @@ class PopulationEducationsController extends Controller
     {
         return view('about');
     }
+  
+
 }
