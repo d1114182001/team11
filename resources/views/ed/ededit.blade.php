@@ -8,8 +8,9 @@
 
 <a href="{{ url('education') }}">返回上一頁</a>
 
-{!! Form::model($Ed1, ['route' => ['ed.edupdate', $Ed1->id], 'method' => 'PATCH']) !!}
-@include("template.edform",['SBTT'=>'修改資料'])
-{!! Form::close() !!}
+    @include('message.list')
+    {!! Form::model($Ed1, ['route' => ['ed.edupdate', $Ed1->id], 'method' => 'PATCH']) !!}
+    @include("template.edform",['SBTT'=>'修改資料'])
+    {!! Form::close() !!}
 
 @endsection
