@@ -16,7 +16,7 @@ class EducationContro2 extends Controller
     public function index()
     {
         $Ed2 = EducationModels2:: all();
-        return view('ed2.ed2view',compact('Ed2'));
+        return view('ed2.view',compact('Ed2'));
     }
 
     /**
@@ -50,7 +50,7 @@ class EducationContro2 extends Controller
     {
         $Ed3 = EducationModels2:: findOrFail($id);
 
-        return view('ed2.ed2show',compact('Ed3'));
+        return view('ed2.show',compact('Ed3'));
     }
 
     /**

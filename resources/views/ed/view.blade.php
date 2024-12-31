@@ -1,4 +1,4 @@
-@extends('template.edtableapp')  <!-- 继承 'all_app.blade.php' 布局 -->
+@extends('template.edtableview')  <!-- 继承 'all_app.blade.php' 布局 -->
 
 @section('title', '工作者的教育程度')  <!-- 定义页面标题 -->
 
@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <a href="{{ route('ed.edcreate') }}">新增數據</a>
+    <a href="{{ route('ed.create') }}">新增數據</a>
 
     <a href="{{ url('education2') }}">查看其他數據</a>
 
@@ -39,8 +39,8 @@
                 <td>{{ $Ed1->junior_college_total }}</td>
                 <td>{{ $Ed1->university_total }}</td>
                 <td>{{ $Ed1->graduate_school_total }}</td>
-                <td><a href="{{route('ed.edshow',['id' => $Ed1 ->id])}}">顯示</a></td>
-                <td><a href="{{ route('ed.ededit', ['id' => $Ed1->id]) }}" class="btn btn-warning">修改</a></td>
+                <td><a href="{{route('ed.show',['id' => $Ed1 ->id])}}">顯示</a></td>
+                <td><a href="{{ route('ed.edit', ['id' => $Ed1->id]) }}" class="btn btn-warning">修改</a></td>
                 <td>
                     <form action="{{ url('/education/delete', ['id' => $Ed1->id])}}"method="post">
                         <input class="btn btn-default" type="submit" value="刪除" />

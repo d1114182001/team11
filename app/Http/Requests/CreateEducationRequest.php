@@ -29,7 +29,6 @@ class CreateEducationRequest extends FormRequest
             'junior_high_below_primary_total' => 'required|integer|min:0',
             'junior_high_total' => 'required|integer|min:0',
             'senior_high_total' => 'required|integer|min:0',
-            'junior_college_above_total' => 'required|integer|min:0',
             'junior_college_total' => 'required|integer|min:0',
             'university_total' => 'required|integer|min:0',
             'graduate_school_total' => 'required|integer|min:0',
@@ -72,9 +71,6 @@ class CreateEducationRequest extends FormRequest
             'senior_high_total.integer' => '高級中等 (千人) 必須是整數。',
             'senior_high_total.min' => '高級中等 (千人) 必須大於0。',
             
-            'junior_college_above_total.required' => '大專及以上合計 (千人) 為必填欄位。',
-            'junior_college_above_total.integer' => '大專及以上合計 (千人) 必須是整數。',
-            'junior_college_above_total.min' => '大專及以上合計 (千人) 必須大於0。',
             
             'junior_college_total.required' => '專科 (千人) 為必填欄位。',
             'junior_college_total.integer' => '專科 (千人) 必須是整數。',

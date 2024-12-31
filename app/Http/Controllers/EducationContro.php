@@ -17,7 +17,7 @@ class EducationContro extends Controller
     public function index()
     {
         $Ed = EducationModels:: all();
-        return view('ed.edview',compact('Ed'));
+        return view('ed.view',compact('Ed'));
     }
 
     /**
@@ -27,7 +27,7 @@ class EducationContro extends Controller
      */
     public function create()
     {
-        return view('ed.edcreate');
+        return view('ed.create');
     }
 
     /**
@@ -95,7 +95,7 @@ class EducationContro extends Controller
     {
         $Ed1 = EducationModels:: findOrFail($id);
 
-        return view('ed.edshow',compact('Ed1'));
+        return view('ed.show',compact('Ed1'));
     }
 
     /**
@@ -108,7 +108,7 @@ class EducationContro extends Controller
     {
         $Ed1 = EducationModels:: findOrFail($id);
 
-        return view('ed.ededit',compact('Ed1'));
+        return view('ed.edit',compact('Ed1'));
     }
 
     /**

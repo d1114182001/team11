@@ -23,14 +23,14 @@ Route::get('/', function () {
 
 
 Route::get('education',[EducationContro::class,"index"]);
-Route::get('education/{id}',[EducationContro::class,"show"])->where('id','[0-9]+')->name('ed.edshow');
-Route::delete('education/delete/{id}',[EducationContro::class,"destroy"])->where('id','[0-9]+')->name('ed.eddestroy');
-Route::get('education/create', [EducationContro::class,"create"])->name('ed.edcreate');
+Route::get('education/{id}',[EducationContro::class,"show"])->where('id','[0-9]+')->name('ed.show');
+Route::delete('education/delete/{id}',[EducationContro::class,"destroy"])->where('id','[0-9]+')->name('ed.destroy');
+Route::get('education/create', [EducationContro::class,"create"])->name('ed.create');
 Route::post('education/store', [EducationContro::class, 'store'])->name('ed.store');
-Route::get('education/{id}/edit',[EducationContro::class,"edit"])->where('id','[0-9]+')->name('ed.ededit');
-Route::patch('education/update/{id}',[EducationContro::class,"update"])->where('id','[0-9]+')->name('ed.edupdate');
+Route::get('education/{id}/edit',[EducationContro::class,"edit"])->where('id','[0-9]+')->name('ed.edit');
+Route::patch('education/update/{id}',[EducationContro::class,"update"])->where('id','[0-9]+')->name('ed.update');
 
 
 Route::get('education2',[EducationContro2::class,"index"]);
-Route::get('education2/{id}',[EducationContro2::class,"show"])->where('id','[0-9]+')->name('ed2.ed2show');
-Route::delete('education2/delete/{id}',[EducationContro2::class,"destroy"])->where('id','[0-9]+')->name('ed2.ed2destroy');
+Route::get('education2/{id}',[EducationContro2::class,"show"])->where('id','[0-9]+')->name('ed2.show');
+Route::delete('education2/delete/{id}',[EducationContro2::class,"destroy"])->where('id','[0-9]+')->name('ed2.destroy');

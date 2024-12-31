@@ -1,4 +1,4 @@
-@extends('template.edtableapp')  <!-- 继承 'all_app.blade.php' 布局 -->
+@extends('template.edtableview')  <!-- 继承 'all_app.blade.php' 布局 -->
 
 @section('title', '工作者的年齡')  <!-- 定义页面标题 -->
 
@@ -25,6 +25,7 @@
             <th>65歲及以上 (千人)</th>
             <th>操作1</th>
             <th>操作2</th>
+
         </tr>
         @foreach ($Ed2 as $Ed3)
             <tr>
@@ -41,7 +42,7 @@
                 <td>{{ $Ed3->age_55_59 }}</td>
                 <td>{{ $Ed3->age_60_64 }}</td>
                 <td>{{ $Ed3->age_65_above_total }}</td>
-                <td><a href="{{route('ed2.ed2show',['id' => $Ed3 ->id])}}">顯示</a></td>
+                <td><a href="{{route('ed2.show',['id' => $Ed3 ->id])}}">顯示</a></td>
                 <td>
                     <form action="{{ url('/education2/delete', ['id' => $Ed3->id])}}"method="post">
                         <input class="btn btn-default" type="submit" value="刪除" />

@@ -1,4 +1,4 @@
-@extends('template.edtableapp2')  
+@extends('template.edtableain')  
 
 @section('title', '工作者的教育程度')  <!-- 定义页面标题 -->
 
