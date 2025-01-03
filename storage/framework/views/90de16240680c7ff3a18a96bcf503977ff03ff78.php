@@ -10,10 +10,7 @@
               <a href="http://sdg04.lhu.edu.tw/">Home</a>
             </li>
             <li>
-              <a href="<?php echo e(route('login')); ?>">login</a>
-            </li>
-            <li>
-              <a href="<?php echo e(route('register')); ?>">register</a>
+              <a href="#">contact</a>
             </li>
             <li>
               <a href="<?php echo e(route('about')); ?>">About Other SDG</a>

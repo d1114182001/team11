@@ -29,3 +29,7 @@ Route::post('/region/store',[PopulationEducationsController::class,'store'])->na
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
