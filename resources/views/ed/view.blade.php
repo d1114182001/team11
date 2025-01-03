@@ -6,7 +6,11 @@
 
 @section('content')
 
-    <a href="{{ route('ed.create') }}">新增數據</a>
+    @can('admin')
+        <a href="{{ route('ed.create') }}">新增數據</a> 
+    @endcan
+           
+
 
     <a href="{{ url('education2') }}">查看其他數據</a>
 
@@ -40,6 +44,7 @@
                 <td>{{ $Ed1->university_total }}</td>
                 <td>{{ $Ed1->graduate_school_total }}</td>
                 <td><a href="{{route('ed.show',['id' => $Ed1 ->id])}}">顯示</a></td>
+                @can('admin')
                 <td><a href="{{ route('ed.edit', ['id' => $Ed1->id]) }}" class="btn btn-warning">修改</a></td>
                 <td>
                     <form action="{{ url('/education/delete', ['id' => $Ed1->id])}}"method="post">
@@ -48,6 +53,9 @@
                         @csrf
                     </form>
                 </td>
+                @elsecan('manager')
+                <td><a href="{{ route('ed.edit', ['id' => $Ed1->id]) }}" class="btn btn-warning">修改</a></td>
+                @endcan
             </tr>
         @endforeach
     </table>
