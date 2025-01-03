@@ -21,7 +21,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role',
     ];
 
     /**
@@ -29,9 +28,6 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    const ROLE_ADMIN ='admin';
-    const ROLE_MANAGER ='manager';
-    const ROLE_USER ='user';
     protected $hidden = [
         'password',
         'remember_token',
@@ -45,5 +41,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
 }

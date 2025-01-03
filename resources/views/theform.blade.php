@@ -1,10 +1,7 @@
 
 @include('card')
 <h1>就業者之教育程度與年齡</h1>
-@can('admin')
-    <a href="{{route('region.create')}}">新增地區資料</a>
-@endcan
-
+<a href="{{route('region.create')}}">新增地區資料</a>
 
 <table border="1">
     <tr>
@@ -17,12 +14,8 @@
         <td>45-64歲總數</td>
         <td>65歲及以上總數</td>
         <td>操作1</td>
-        @can('admin')
         <td>操作2</td>
         <td>操作3</td>
-        @elsecan('manager')
-        <td>操作2</td>
-        @endcan
     </tr>
     @foreach ($pop as $populations)
         <tr>
@@ -35,7 +28,6 @@
             <td>{{ $populations->age_45_64_total }}</td>
             <td>{{ $populations->age_65_above }}</td>
             <td><a href="{{ route('region.show',['id' => $populations->id]) }}">show</a></td>
-            @can('admin')
             <td><a href="{{ route('region.edit',['id' => $populations->id]) }}">edit</a></td>
             <td>
                 <form action="{{ url('/delete',['id' => $populations->id])}}" method="POST">
@@ -44,9 +36,6 @@
                     @csrf 
                 </form>
             </td>
-            @elsecan('manager')
-            <td><a href="{{ route('region.edit',['id' => $populations->id]) }}">edit</a></td>
-            @endcan
         </tr>
     @endforeach
 </table>
