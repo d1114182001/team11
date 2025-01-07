@@ -1,4 +1,4 @@
-@extends('populationEducations')
+@extends('layouts.model')
 
 @section('title', 'SDG 介紹首頁')
 
@@ -12,8 +12,8 @@
     </div>
 </div>
 
-
 @endsection
+
 @section('navbar')
     @include('particials.navbar', ['navbarImage' => '/pictures/sdg_nav.png', 'navbarText' => '可持續發展目標 (SDG)'])
 @endsection

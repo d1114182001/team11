@@ -20,12 +20,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PopulationEducationsController::class,'index']);
 Route::get('/about', [PopulationEducationsController::class,'about'])->name('about');
 
-Route::get('/{id}',[PopulationEducationsController::class,'show'])->where('id','[0-9]+')->name('region.show');
-Route::get('/{id}/edit',[PopulationEducationsController::class,'edit'])->where('id','[0-9]+')->name('region.edit');
-Route::patch('/update/{id}',[PopulationEducationsController::class,'update'])->where('id','[0-9]+')->name('region.update');
+Route::get('/{id}',[PopulationEducationsController::class,'show'])->where('id','[0-9]+')->name('region.show')->middleware('check.auth');
+Route::get('/{id}/edit',[PopulationEducationsController::class,'edit'])->where('id','[0-9]+')->name('region.edit')->middleware('check.manager.or.admin');
+Route::patch('/update/{id}',[PopulationEducationsController::class,'update'])->where('id','[0-9]+')->name('region.update')->middleware('check.check.manager.or.admin');
 Route::delete('/delete/{id}',[PopulationEducationsController::class,'destroy'])->where('id','[0-9]+')->name('region.destroy')->middleware('can:admin');
 Route::get('/region/create',[PopulationEducationsController::class,'create'])->name('region.create')->middleware('can:admin');
-Route::post('/region/store',[PopulationEducationsController::class,'store'])->name('region.store');
+Route::post('/region/store',[PopulationEducationsController::class,'store'])->name('region.store')->middleware('check.check.manager.or.admin');
 
 
 

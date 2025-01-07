@@ -12,8 +12,8 @@
     </div>
 </div>
 
-
 <?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('navbar'); ?>
     <?php echo $__env->make('particials.navbar', ['navbarImage' => '/pictures/sdg_nav.png', 'navbarText' => '可持續發展目標 (SDG)'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php $__env->stopSection(); ?>
@@ -27,4 +27,4 @@
 <?php $__env->stopSection(); ?>
 
 
-<?php echo $__env->make('populationEducations', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\team11\resources\views/about.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.model', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\team11\resources\views/about.blade.php ENDPATH**/ ?>
