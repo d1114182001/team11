@@ -23,8 +23,8 @@ Route::get('/about', [PopulationEducationsController::class,'about'])->name('abo
 Route::get('/{id}',[PopulationEducationsController::class,'show'])->where('id','[0-9]+')->name('region.show');
 Route::get('/{id}/edit',[PopulationEducationsController::class,'edit'])->where('id','[0-9]+')->name('region.edit');
 Route::patch('/update/{id}',[PopulationEducationsController::class,'update'])->where('id','[0-9]+')->name('region.update');
-Route::delete('/delete/{id}',[PopulationEducationsController::class,'destroy'])->where('id','[0-9]+')->name('region.destroy');
-Route::get('/region/create',[PopulationEducationsController::class,'create'])->name('region.create');
+Route::delete('/delete/{id}',[PopulationEducationsController::class,'destroy'])->where('id','[0-9]+')->name('region.destroy')->middleware('can:admin');
+Route::get('/region/create',[PopulationEducationsController::class,'create'])->name('region.create')->middleware('can:admin');
 Route::post('/region/store',[PopulationEducationsController::class,'store'])->name('region.store');
 
 
