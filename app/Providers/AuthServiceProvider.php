@@ -39,6 +39,13 @@ class AuthServiceProvider extends ServiceProvider
         // 一般使用者 Gate 規則
         Gate::define('user', function ($user) {
             return $user->role === User::ROLE_USER;
-        });    
+        });  
+        
+        
+        $this->registerPolicies();
+
+        Gate::define('edit-education', function ($user) {
+            return in_array($user->role, ['admin', 'manager']);
+        });
     }
 }

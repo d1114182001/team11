@@ -110,6 +110,7 @@ class EducationContro extends Controller
      */
     public function edit($id)
     {
+        
         $Ed1 = EducationModels:: findOrFail($id);
 
         return view('ed.edit',compact('Ed1'));

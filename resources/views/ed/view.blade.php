@@ -8,7 +8,8 @@
 
     @can('admin')
         <a href="{{ route('ed.create') }}">新增數據</a> 
-    @endcan           
+    @endcan 
+
 
 
     <a href="{{ url('education2') }}">查看其他數據</a>
