@@ -8,8 +8,7 @@
 
     @can('admin')
         <a href="{{ route('ed.create') }}">新增數據</a> 
-    @endcan
-           
+    @endcan           
 
 
     <a href="{{ url('education2') }}">查看其他數據</a>
@@ -27,8 +26,12 @@
             <th>大學 (千人)</th>
             <th>研究所 (千人)</th>
             <th>操作1</th>
+            @can('admin')
             <th>操作2</th>
             <th>操作3</th>
+            @elsecan('manager')
+            <th>操作2</th>
+            @endcan
         </tr>
 
         @foreach ($Ed as $Ed1)
