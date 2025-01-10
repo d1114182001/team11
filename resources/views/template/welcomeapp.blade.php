@@ -64,7 +64,7 @@
             font-size: 1.1em;
         }
         .cta-btn {
-            background-color: #ff0000;
+            background-color: #053ec5;
             color: rgb(255, 255, 255);
             padding: 15px 40px;
             border: none;
@@ -74,6 +74,15 @@
             transition: all 0.3s ease-in-out;
             display: block;
             margin: 40px auto;
+            text-decoration: none; /* 确保没有底线 */
+
+            position: fixed; /* 固定按钮位置 */
+    top: 20px; /* 设置按钮距离页面顶部的距离 */
+    right: 20px; /* 设置按钮距离页面右边的距离 */
+    z-index: 1000; /* 确保按钮在页面上层显示 */
+        }
+        a {
+            text-decoration: none; /* 去掉下划线 */
         }
         .cta-btn:hover {
             background-color: #e60000;

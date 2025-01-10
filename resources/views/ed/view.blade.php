@@ -1,18 +1,18 @@
-@extends('template.edtableview')  <!-- 继承 'all_app.blade.php' 布局 -->
+@extends('template.edtableview')  
 
-@section('title', '工作者的教育程度')  <!-- 定义页面标题 -->
+@section('title', '工作者的教育程度') 
 
 @section('viewtital','各地區工作者的教育程度') 
 
 @section('content')
 
     @can('admin')
-        <a href="{{ route('ed.create') }}">新增數據</a> 
+        <a href="{{ route('ed.create') }}" class="cta-btn2">新增數據</a> 
     @endcan 
 
 
 
-    <a href="{{ url('education2') }}">查看其他數據</a>
+    <a href="{{ url('education2') }}" class="cta-btn2">查看其他數據</a>
 
     <table>
         <tr>

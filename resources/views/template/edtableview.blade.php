@@ -78,6 +78,68 @@
             background-color: #e60000;
             transform: scale(1.05);
         }
+
+        a {
+            color: #124296; /* 链接颜色 */
+            text-decoration: none; /* 去掉下划线 */
+            font-weight: bold; /* 加粗文字 */
+        }
+
+        a:hover {
+            color: #fff; /* 悬停时文字颜色变白 */
+            background-color: #071e62; /* 悬停时背景颜色 */
+            border-radius: 5px; /* 圆角效果 */
+        }
+        .cta-btn2 {
+            background-color: #041f51;
+            color: #f8f8ff;
+            padding: 10px 20px; /* 缩小按钮的内边距 */
+            border: none;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            max-width: 200px; /* 限制按钮最大宽度 */
+            text-overflow: ellipsis; /* 长文本溢出时显示省略号 */
+            white-space: nowrap; /* 防止文本换行 */
+            overflow: hidden; /* 隐藏溢出的文本 */
+        }
+
+        .cta-btn:hover {
+            background-color: #e60000;
+            transform: scale(1.05);
+        }
+        .cta-btn3 {
+    background: linear-gradient(145deg, #3f5efb, #fc466b); /* 渐变背景色 */
+    color: #fff;
+    padding: 12px 28px;  /* 调整按钮内边距 */
+    border: none;
+    font-size: 1.2em; /* 稍微增大字体 */
+    cursor: pointer;
+    border-radius: 50px; /* 圆角更大 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    max-width: 250px; /* 增大按钮宽度限制 */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center; /* 确保文本居中 */
+    text-decoration: none; /* 去掉默认链接下划线 */
+    font-weight: bold; /* 增加文本加粗 */
+
+    position: fixed; /* 固定按钮位置 */
+    top: 20px; /* 设置按钮距离页面顶部的距离 */
+    right: 20px; /* 设置按钮距离页面右边的距离 */
+    z-index: 1000; /* 确保按钮在页面上层显示 */
+}
+
+.cta-btn3:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大效果 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 鼠标悬停时阴影增大 */
+    background: linear-gradient(145deg, #fc466b, #3f5efb); /* 鼠标悬停时反转渐变色 */
+}
     </style>
 </head>
 <body>
@@ -93,7 +155,7 @@
     @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
-                <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">登出頁面</a>
+                <a href="{{ url('/home') }}" class="cta-btn3">登出</a>
             @else
                 <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 

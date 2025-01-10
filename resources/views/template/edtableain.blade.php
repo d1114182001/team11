@@ -39,7 +39,14 @@
             font-weight: bold;
             font-size: 18px;
         }
-
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
 
 
 
@@ -47,29 +54,37 @@
     table {
         width: 100%;
         border-collapse: collapse;
+        border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
     }
 
     th, td {
         padding: 8px;
         text-align: center;
         border: 1px solid #ddd;
+        padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.1rem;
     }
 
     /* 为不同区域设置背景颜色 */
     .basic-info {
-        background-color: #f2f2f2; /* 浅灰色背景 */
+        background-color: #f1fabf; /* 浅灰色背景 */
     }
 
     .tital-info {
-        background-color: rgb(245, 113, 113); /* 浅灰色背景 */
+        background-color: rgb(240, 58, 58); /* 浅灰色背景 */
+        color: #ffffff
     }
 
     .basic-info2 {
-        background-color: #f5e1e1; /* 浅灰色背景 */
+        background-color: #b1d694e4; /* 浅灰色背景 */
     }
 
     .age-data {
-        background-color: #faeda5; /* 浅蓝色背景 */
+        background-color: #fac8a5; /* 浅蓝色背景 */
     }
 
     .age-group {
@@ -90,6 +105,33 @@
         .cta-btn:hover {
             background-color: #e60000;
             transform: scale(1.05);
+        }
+
+        a {
+            color: #124296; /* 链接颜色 */
+            text-decoration: none; /* 去掉下划线 */
+            font-weight: bold; /* 加粗文字 */
+        }
+
+        a:hover {
+            color: #fff; /* 悬停时文字颜色变白 */
+            background-color: #071e62; /* 悬停时背景颜色 */
+            border-radius: 5px; /* 圆角效果 */
+        }
+        .cta-btn2 {
+            background-color: #041f51;
+            color: #f8f8ff;
+            padding: 10px 20px; /* 缩小按钮的内边距 */
+            border: none;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            max-width: 200px; /* 限制按钮最大宽度 */
+            text-overflow: ellipsis; /* 长文本溢出时显示省略号 */
+            white-space: nowrap; /* 防止文本换行 */
+            overflow: hidden; /* 隐藏溢出的文本 */
         }
 
 

@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <a href="{{ url('education') }}">返回上一頁</a>
+    <a href="{{ url('education') }} " class="cta-btn2">返回上一頁</a>
 
     <table>
         <tr>

@@ -25,9 +25,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('education',[EducationContro::class,"index"]);
     Route::get('education/{id}',[EducationContro::class,"show"])->where('id','[0-9]+')->name('ed.show');
+
     Route::delete('education/delete/{id}',[EducationContro::class,"destroy"])->where('id','[0-9]+')->name('ed.destroy')->middleware('can:admin');
     Route::get('education/create', [EducationContro::class,"create"])->name('ed.create')->middleware('can:admin');
     Route::post('education/store', [EducationContro::class, 'store'])->name('ed.store')->middleware('can:admin');
+    
     Route::get('education/{id}/edit',[EducationContro::class,"edit"])->where('id','[0-9]+')->name('ed.edit')->middleware('can:edit-education');;
     Route::patch('education/update/{id}',[EducationContro::class,"update"])->where('id','[0-9]+')->name('ed.update');
 
