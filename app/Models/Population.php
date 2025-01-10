@@ -9,7 +9,7 @@ class Population extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'region',
+            'region',
             'total',
             'edu_jr_high_below_total',
             'edu_primary_below',

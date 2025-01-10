@@ -1,16 +1,16 @@
 <html>
     <head>
-        <title>@yield('title', '我國教育人口')</title>
+        <title>我國教育人口</title>
         <link rel="stylesheet" href="{{ asset('/app.css') }}">     
     </head>
     
-        @include('particials.navbar', ['navbarImage' => '/pictures/E_SDG_Icons-04.jpg', 'navbarText' => 'Quality Education(優質教育)'])
+        @include('particials.navbar')
     <body>
         
         <main>
             <h1>就業者之教育程度與年齡</h1>
             @can('admin')
-            <a href="{{route('region.create')}}">新增地區資料</a>
+            <a href="{{route('region.create')}}"class="newa">新增地區資料</a>
             @endcan
             
                 <table border="1">
@@ -23,12 +23,12 @@
                         <td>25-44歲總數</td>
                         <td>45-64歲總數</td>
                         <td>65歲及以上總數</td>
-                        <td>操作1</td>
+                        <td>顯示</td>
                         @can('admin')
-                        <td>操作2</td>
-                        <td>操作3</td>
+                        <td>編輯</td>
+                        <td>刪除</td>
                         @elsecan('manager')
-                        <td>操作2</td>
+                        <td>編輯</td>
                         @endcan
                     </tr>
                     
@@ -41,19 +41,19 @@
                             <td>{{ $populations->age_25_44_total }}</td>
                             <td>{{ $populations->age_45_64_total }}</td>
                             <td>{{ $populations->age_65_above }}</td>
-                            <td><a href="{{ route('region.show',['id' => $populations->id]) }}">show</a></td>
+                            <td><a href="{{ route('region.show',['id' => $populations->id]) }}"class="newa">show</a></td>
                             @can('admin')
-                                <td><a href="{{ route('region.edit',['id' => $populations->id]) }}">edit</a></td>
+                                <td><a href="{{ route('region.edit',['id' => $populations->id]) }}"class="newa">edit</a></td>
                             <td>
                                 <form action="{{ url('/delete',['id' => $populations->id])}}" method="POST">
-                                    <input class="btn btn-default" type="submit" value="刪除"/>
+                                    <input class="btn btn-danger btn-sm" type="submit" value="刪除"/>
                                     @method('delete')
                                     @csrf 
                                 </form>
                             </td>
                             @elsecan('manager')
                             
-                            <td><a href="{{ route('region.edit',['id' => $populations->id]) }}">edit</a></td>
+                            <td><a href="{{ route('region.edit',['id' => $populations->id]) }}"class="newa">edit</a></td>
                             @endcan
                         </tr>
                     

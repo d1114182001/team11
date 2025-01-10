@@ -15,17 +15,20 @@ class CheckLogic
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-    {
-         // 檢查是否是 manager 或 admin
-        if ($request->user() == null){
-            abort(403);
-        }elseif($request->user()->hasRole('manager')  || $request->user()->hasRole('admin')){
-
-        }else{
-            abort(403);
-        }
-
-        // 如果不是 manager 或 admin，返回 403
-       
+{
+    // 如果沒有登入的用戶，返回 403
+    if ($request->user() === null) {
+        abort(403);
     }
+
+    // 檢查是否是 manager 或 admin
+    if ($request->user()->hasRole('manager') || $request->user()->hasRole('admin')) {
+        // 如果是 manager 或 admin，繼續處理請求
+        return $next($request);
+    }
+
+    // 如果不是 manager 或 admin，返回 403
+    abort(403);
+}
+
 }

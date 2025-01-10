@@ -7,7 +7,7 @@
         <span class="sitename"><?php echo e($navbarText ?? 'Quality Education(優質教育)'); ?></span>
         <ul>
             <li>
-              <a href="http://sdg04.lhu.edu.tw/">Home</a>
+              <a href="http://127.0.0.1:8000">Home</a>
             </li>
             <li>
               <a href="<?php echo e(route('login')); ?>">Login</a>

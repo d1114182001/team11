@@ -7,7 +7,7 @@
         <span class="sitename">{{ $navbarText ?? 'Quality Education(優質教育)' }}</span>
         <ul>
             <li>
-              <a href="http://sdg04.lhu.edu.tw/">Home</a>
+              <a href="http://127.0.0.1:8000">Home</a>
             </li>
             <li>
               <a href="{{ route('login') }}">Login</a>

@@ -15,17 +15,19 @@ class CheckShowLogic
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-    {
-        if ($request->user() == null){
-            abort(403);
-        }elseif($request->user()->hasRole('manager') || $request->user()->hasRole('user') || $request->user()->hasRole('admin')){
-
-        }else{
-            abort(403);
-        }
-        
-
-        // 如果不是 manager 或 admin，返回 403
-        
+{
+    // 如果沒有登入的用戶，返回 403
+    if ($request->user() === null) {
+        abort(403);
     }
+
+    // 如果用戶擁有 'manager', 'user', 或 'admin' 角色，則繼續
+    if ($request->user()->hasRole('manager') || $request->user()->hasRole('user') || $request->user()->hasRole('admin')) {
+        return $next($request);
+    }
+
+    // 其他情況，返回 403
+    abort(403);
+}
+
 }
